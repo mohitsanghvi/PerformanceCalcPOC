@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import com.example.PerformanceCalcPOC.screen.AmazonHomeScreen;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -66,7 +67,7 @@ public class AmazonHomeScreenWeb extends AmazonHomeScreen {
         List<String> searchSuggestionList=new ArrayList<>();
 
         try {
-            flu_wait = new FluentWait(driver).withTimeout(10, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS);
+            flu_wait = new FluentWait(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(2));
             //wait = new WebDriverWait(driver,10);
             flu_wait.until(ExpectedConditions.presenceOfElementLocated(srchRsPlaceHolder));
             List<WebElement> searchResultsWe = driver.findElements(searchResultXpath);

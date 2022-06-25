@@ -19,7 +19,7 @@ public abstract class AmazonHomeScreen {
                 driver=new ChromeDriver();
                 return new AmazonHomeScreenWeb(driver);
         }
-        throw new NotImplementedException();
+        throw new NotImplementedException(execPlatform+ "is not yet Implemented");
 
 
     }

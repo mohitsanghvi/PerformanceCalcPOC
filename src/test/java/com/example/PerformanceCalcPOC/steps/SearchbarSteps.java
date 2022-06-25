@@ -5,7 +5,9 @@ import com.example.PerformanceCalcPOC.businessLayer.HomeBL;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.springframework.stereotype.Component;
 
+@Component
 public class SearchbarSteps {
 
     @Given("User is on Home page")
