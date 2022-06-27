@@ -2,6 +2,7 @@ package com.example.PerformanceCalcPOC;
 
 import java.util.Arrays;
 
+import com.example.PerformanceCalcPOC.businessLayer.HomeBL;
 import com.example.PerformanceCalcPOC.steps.SearchbarSteps;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -49,9 +50,13 @@ class CucAspect {
 public class AopRunner{
     @Autowired
     private SearchbarSteps searchbarsteps;
+    private HomeBL homebl;
 
     @Test
     public void testSome() {
-         searchbarsteps.userIsOnHomePage();
+        searchbarsteps.userIsOnHomePage();
+        searchbarsteps.userSearchesFor("Macbook");
+        searchbarsteps.verifyMatchingOptions();
     }
+
 }

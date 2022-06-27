@@ -2,7 +2,7 @@ package com.example.PerformanceCalcPOC.businessLayer;
 
 import com.example.PerformanceCalcPOC.screen.AmazonHomeScreen;
 import org.springframework.stereotype.Component;
-
+@Component
 public class HomeBL {
 
     public SearchBL navigateTo(){
