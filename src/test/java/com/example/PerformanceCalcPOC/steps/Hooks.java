@@ -5,7 +5,7 @@ import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeStep;
 
-
+/*
 public class Hooks {
 
     private static long exeStartTime,exeEndTime;
@@ -54,3 +54,6 @@ public class Hooks {
         return stepExecTimeInSec;
     }
 }
+
+
+ */

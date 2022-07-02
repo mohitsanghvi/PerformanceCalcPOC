@@ -1,32 +1,18 @@
 package com.example.PerformanceCalcPOC;
 
-import java.util.Arrays;
 
-import com.example.PerformanceCalcPOC.businessLayer.HomeBL;
-import com.example.PerformanceCalcPOC.steps.SearchbarSteps;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-/*
-@Configuration
-@ComponentScan(basePackages = { "com.example.PerformanceCalcPOC" })
-@EnableAspectJAutoProxy
-class com.example.PerformanceCalcPOC.SpringContextsAOP {
-}
+import java.util.Arrays;
 
 @Aspect
 @Component
+@EnableAspectJAutoProxy
 class CucAspect {
 
     @Before("execution(* com.example.PerformanceCalcPOC.steps.*.*(..)) || execution(* com.example.PerformanceCalcPOC.businessLayer.*.*(..))")
@@ -44,20 +30,3 @@ class CucAspect {
     }
 
 }
-
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = com.example.PerformanceCalcPOC.SpringContextsAOP.class)
-public class AopRunner{
-    @Autowired
-    private SearchbarSteps searchbarsteps;
-    private HomeBL homebl;
-
-    @Test
-    public void testSome() {
-        searchbarsteps.userIsOnHomePage();
-        searchbarsteps.userSearchesFor("Macbook");
-        searchbarsteps.verifyMatchingOptions();
-    }
-
-}
-*/

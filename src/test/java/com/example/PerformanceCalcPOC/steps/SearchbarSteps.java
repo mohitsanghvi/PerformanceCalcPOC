@@ -1,15 +1,15 @@
 package com.example.PerformanceCalcPOC.steps;
 
+import com.example.PerformanceCalcPOC.AOPAppRunner;
 import com.example.PerformanceCalcPOC.businessLayer.SearchBL;
 import com.example.PerformanceCalcPOC.businessLayer.HomeBL;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SearchbarSteps {
+public class SearchbarSteps extends AOPAppRunner {
 
     @Given("User is on Home page")
     public void userIsOnHomePage() {
